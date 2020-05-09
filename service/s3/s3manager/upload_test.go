@@ -10,12 +10,11 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ks3sdklib/aws-sdk-go/aws"
-	"github.com/ks3sdklib/aws-sdk-go/aws/awserr"
-	"github.com/ks3sdklib/aws-sdk-go/aws/awsutil"
-	"github.com/ks3sdklib/aws-sdk-go/internal/test/unit"
-	"github.com/ks3sdklib/aws-sdk-go/service/s3"
-	"github.com/ks3sdklib/aws-sdk-go/service/s3/s3manager"
+	"github.com/codjust/aws-sdk-go/aws"
+	"github.com/codjust/aws-sdk-go/aws/awserr"
+	"github.com/codjust/aws-sdk-go/aws/awsutil"
+	"github.com/codjust/aws-sdk-go/service/s3"
+	"github.com/codjust/aws-sdk-go/service/s3/s3manager"
 	"github.com/stretchr/testify/assert"
 )
 

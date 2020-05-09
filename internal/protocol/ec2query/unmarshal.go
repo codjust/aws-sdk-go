@@ -4,11 +4,11 @@ package ec2query
 
 import (
 	"encoding/xml"
+	"github.com/codjust/aws-sdk-go/internal/apierr"
+	"github.com/codjust/aws-sdk-go/internal/protocol/xml/xmlutil"
 	"io"
 
-	"github.com/ks3sdklib/aws-sdk-go/aws"
-	"github.com/ks3sdklib/aws-sdk-go/internal/apierr"
-	"github.com/ks3sdklib/aws-sdk-go/internal/protocol/xml/xmlutil"
+	"github.com/codjust/aws-sdk-go/aws"
 )
 
 // Unmarshal unmarshals a response body for the EC2 protocol.

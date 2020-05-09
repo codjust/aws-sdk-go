@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"github.com/codjust/aws-sdk-go/internal/apierr"
 	"io"
 	"io/ioutil"
 	"net/http"
@@ -11,9 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ks3sdklib/aws-sdk-go/aws/awserr"
-	"github.com/ks3sdklib/aws-sdk-go/aws/credentials"
-	"github.com/ks3sdklib/aws-sdk-go/internal/apierr"
+	"github.com/codjust/aws-sdk-go/aws/awserr"
+	"github.com/codjust/aws-sdk-go/aws/credentials"
 	"github.com/stretchr/testify/assert"
 )
 

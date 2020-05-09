@@ -1,12 +1,12 @@
 package aws
 
 import (
+	"github.com/codjust/aws-sdk-go/internal/apierr"
 	"net/http"
 	"os"
 	"testing"
 
-	"github.com/ks3sdklib/aws-sdk-go/aws/credentials"
-	"github.com/ks3sdklib/aws-sdk-go/internal/apierr"
+	"github.com/codjust/aws-sdk-go/aws/credentials"
 	"github.com/stretchr/testify/assert"
 )
 

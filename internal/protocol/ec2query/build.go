@@ -4,11 +4,11 @@ package ec2query
 //go:generate go run ../../fixtures/protocol/generate.go ../../fixtures/protocol/input/ec2.json build_test.go
 
 import (
+	"github.com/codjust/aws-sdk-go/internal/apierr"
+	"github.com/codjust/aws-sdk-go/internal/protocol/query/queryutil"
 	"net/url"
 
-	"github.com/ks3sdklib/aws-sdk-go/aws"
-	"github.com/ks3sdklib/aws-sdk-go/internal/apierr"
-	"github.com/ks3sdklib/aws-sdk-go/internal/protocol/query/queryutil"
+	"github.com/codjust/aws-sdk-go/aws"
 )
 
 // Build builds a request for the EC2 protocol.

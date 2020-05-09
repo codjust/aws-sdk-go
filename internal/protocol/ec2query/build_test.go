@@ -4,6 +4,10 @@ import (
 	"bytes"
 	"encoding/json"
 	"encoding/xml"
+	"github.com/codjust/aws-sdk-go/internal/protocol/ec2query"
+	"github.com/codjust/aws-sdk-go/internal/protocol/xml/xmlutil"
+	v4 "github.com/codjust/aws-sdk-go/internal/signer/v4"
+	"github.com/codjust/aws-sdk-go/internal/util"
 	"io"
 	"io/ioutil"
 	"net/http"
@@ -11,11 +15,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ks3sdklib/aws-sdk-go/aws"
-	"github.com/ks3sdklib/aws-sdk-go/internal/protocol/ec2query"
-	"github.com/ks3sdklib/aws-sdk-go/internal/protocol/xml/xmlutil"
-	"github.com/ks3sdklib/aws-sdk-go/internal/signer/v4"
-	"github.com/ks3sdklib/aws-sdk-go/internal/util"
+	"github.com/codjust/aws-sdk-go/aws"
 	"github.com/stretchr/testify/assert"
 )
 

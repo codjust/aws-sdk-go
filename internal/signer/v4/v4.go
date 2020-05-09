@@ -6,6 +6,7 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
+	"github.com/codjust/aws-sdk-go/internal/protocol/rest"
 	"io"
 	"net/http"
 	"net/url"
@@ -14,10 +15,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ks3sdklib/aws-sdk-go/aws/credentials"
-	"github.com/ks3sdklib/aws-sdk-go/internal/protocol/rest"
+	"github.com/codjust/aws-sdk-go/aws/credentials"
 
-	"github.com/ks3sdklib/aws-sdk-go/aws"
+	"github.com/codjust/aws-sdk-go/aws"
 )
 
 const (

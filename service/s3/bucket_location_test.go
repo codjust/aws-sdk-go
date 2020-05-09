@@ -2,14 +2,14 @@ package s3_test
 
 import (
 	"bytes"
+	"github.com/codjust/aws-sdk-go/internal/test/unit"
 	"io/ioutil"
 	"net/http"
 	"testing"
 
-	"github.com/ks3sdklib/aws-sdk-go/aws"
-	"github.com/ks3sdklib/aws-sdk-go/aws/awsutil"
-	"github.com/ks3sdklib/aws-sdk-go/internal/test/unit"
-	"github.com/ks3sdklib/aws-sdk-go/service/s3"
+	"github.com/codjust/aws-sdk-go/aws"
+	"github.com/codjust/aws-sdk-go/aws/awsutil"
+	"github.com/codjust/aws-sdk-go/service/s3"
 	"github.com/stretchr/testify/assert"
 )
 
