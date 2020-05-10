@@ -17,7 +17,13 @@ type S3 struct {
 var initService func(*aws.Service)
 
 // Used for custom request initialization logic
-var initRequest func(*aws.Request)
+// var initRequest func(*aws.Request)
+var reqBeforeList []func(*aws.Request)
+
+// Used for custom request initialization logic
+func RegisterRequestBefore(r ...func(*aws.Request)) {
+	reqBeforeList = append(reqBeforeList, r...)
+}
 
 // New returns a new S3 client.
 func New(config *aws.Config) *S3 {
@@ -50,8 +56,10 @@ func (c *S3) newRequest(op *aws.Operation, params, data interface{}) *aws.Reques
 	req := aws.NewRequest(c.Service, op, params, data)
 
 	// Run custom request initialization if present
-	if initRequest != nil {
-		initRequest(req)
+	if reqBeforeList != nil && len(reqBeforeList) > 0 {
+		for _, initReq := range reqBeforeList {
+			initReq(req)
+		}
 	}
 
 	return req

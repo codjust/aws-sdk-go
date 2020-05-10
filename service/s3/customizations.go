@@ -16,7 +16,7 @@ func init() {
 		s.Handlers.UnmarshalError.PushBack(unmarshalError)
 	}
 
-	initRequest = func(r *aws.Request) {
+	RegisterRequestBefore(func(r *aws.Request) {
 		switch r.Operation {
 		case opPutBucketCORS, opPutBucketLifecycle, opPutBucketPolicy, opPutBucketTagging, opDeleteObjects, opPutObject, opUploadPart:
 			// These S3 operations require Content-MD5 to be set
@@ -28,5 +28,5 @@ func init() {
 			// Auto-populate LocationConstraint with current region
 			r.Handlers.Validate.PushFront(populateLocationConstraint)
 		}
-	}
+	})
 }
